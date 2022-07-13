@@ -1,0 +1,29 @@
+{% extends "core/layout.html" %}
+
+{% block content %}
+
+
+    <section class="row mt-4">
+        <div class="col -12 mb-4">
+            <h2 class="display-4 text-center"> mis compras</h2> <br>
+        </div>
+        <br>
+
+        <div class="row row-cols-1 row-cols-md-3 container justify-content-center">
+            {% for compra in compras %}
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="card h-100 card-img-producto-home">
+                        <div class="card-body text-center">
+                            <h4 class="card-title"> {{compra.total}}</h4>
+                            <p class="card-text">{{compra.estado}}</p>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}
+
+
+
